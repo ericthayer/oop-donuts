@@ -1,3 +1,4 @@
+.DS_Store
 laravel/node_modules
 laravel/public/hot
 laravel/public/storage
