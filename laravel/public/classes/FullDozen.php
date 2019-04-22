@@ -5,9 +5,12 @@ class Dozen
 
     private $donuts;
 
-    public function __construct($donuts = array())
+    private $count = 1;
+
+    public function __construct($donuts = [], $donutCount)
     {
-      $this->donuts = $donuts;
+      $this->donuts[] = $donuts;
+      $this->count  = $donutCount;
     }
 
     public function quantity()

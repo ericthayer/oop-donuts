@@ -1,20 +1,16 @@
 <?php
 
-abstract class Donut
+abstract class Cost
 {
-  private $type = [];
-  private $price = 0.65;
-  private $specialPrice = 1.15;
-  private $monthlySpecialPrice = .50;
-  private $count = 1;
+  private $regularPrice            = 0.65;
+  private $specialPrice            = 1.15;
+  private $monthlySpecialPrice     = 0.50;
 
-  public function __construct($donutType, $donutPrice, $specialPrice, $monthlySpecialPrice, $donutCount)
+  public function __construct($donutPrice, $specialPrice, $monthlySpecialPrice)
   {
-    $this->type                 = $donutType;
-    $this->price                = $donutPrice;
-    $this->specialPrice         = $specialPrice;
-    $this->monthlySpecialPrice  = $monthlySpecialPrice;
-    $this->count                = $donutCount;
+    $this->regularPrice           = $donutPrice;
+    $this->specialPrice           = $specialPrice;
+    $this->monthlySpecialPrice    = $monthlySpecialPrice;
   }  
 
   public function setType($newType)
