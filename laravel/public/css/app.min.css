@@ -16,21 +16,25 @@ html {
 
 body {
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-.image-wrap {
-  background: url(/images/bg-donut-box.jpg?9866ffc6ffa9d56dd7aa617796aa3aa5) no-repeat center #6574cd;
-  background: url(/images/bg-donut-box.jpg?9866ffc6ffa9d56dd7aa617796aa3aa5) no-repeat center var(--indigo);
-  background-blend-mode: multiply;
-  background-size: cover;
+.content-wrap {
+  background: linear-gradient(45deg, darkmagenta, teal);
+}
+
+.bg-image {
+  -o-object-fit: cover;
+  object-fit: cover;
   position: absolute;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
   z-index: 0;
-  -webkit-filter: contrast(0.7) brightness(0.7);
-  filter: contrast(0.7) brightness(0.7);
+  -webkit-filter: contrast(0.7) brightness(0.7) opacity(0.5);
+  filter: contrast(0.7) brightness(0.7) opacity(0.5);
 }
 
 .full-height {

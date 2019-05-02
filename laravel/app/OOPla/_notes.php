@@ -7,10 +7,11 @@
 //    $donut properties that make up an order:
 //      $regularDonut                 = ['bars', 'cake', 'raised', 'twists']
 //      $specialDonut                 = ['filled', 'sprinkels', 'monthlySpecial']
-//      $monthlySpecialDonut(bool)    = false
-//**    $donutTypes                   = []
+//      $donutTypes                   = []
 
-// 2. Put the Donut(s) in a Box - HalfDozen.php, FullDozen.php
+//      $monthlySpecialDonut(bool)    = false
+
+// 2. Put the Donut(s) in a Box - Count.php, HalfDozen.php, FullDozen.php
 
 //      $donutCount      = sum($donutTypes)
 //      $halfDozenBox    = $donutCount === 6
@@ -44,4 +45,6 @@
 
 // $dozen = new Dozen($donuts);
 
-?>
+
+
+// setup parent class to define Donut, Box, Cost, and OrderType

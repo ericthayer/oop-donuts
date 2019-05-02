@@ -9,19 +9,23 @@ html {
 
 body {
   height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-.image-wrap {
-  background: url("../media/images/bg-donut-box.jpg") no-repeat center var(--indigo);
-  background-blend-mode: multiply;
-  background-size: cover;
+.content-wrap {
+  background: linear-gradient(45deg, darkmagenta, teal);
+}
+
+.bg-image {
+  object-fit: cover;
   position: absolute;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
   z-index: 0;
-  filter: contrast(.7) brightness(.7);
+  filter: contrast(.7) brightness(.7) opacity(.5);
 }
 
 .full-height {

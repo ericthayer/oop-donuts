@@ -28,6 +28,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "postcss-custom-properties": "^8.0.10"
+        "postcss-custom-properties": "^8.0.10",
+        "vuetify": "^1.5.13"
     }
 }

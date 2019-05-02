@@ -41,7 +41,7 @@
                 </div>
               </main>
 
-            <div class="image-wrap"></div>
+            <img class="bg-image" src="http://local.oopla.com/media/images/compressed/bg-donut-box.jpg" alt="" />
         </div>
 
         {{-- <script src="{{ asset('js/app.js') }}"></script> --}}

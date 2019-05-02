@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://local.donutsoop.com'),
+    'url' => env('APP_URL', 'http://local.oopla.com'),
 
     'asset_url' => env('ASSET_URL', null),
 

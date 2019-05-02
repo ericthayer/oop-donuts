@@ -58,3 +58,18 @@ $response = $kernel->handle(
 $response->send();
 
 $kernel->terminate($request, $response);
+
+// TinyPNG - compressing images
+
+\Tinify\setKey("wN46T02hOZIzKfWJANYSdfubKrGyUs9L");
+
+$dir = 'media/images/uncompressed/';
+$images = scandir($dir);
+$images = array_diff($images, array('.', '..'));
+
+foreach ($images as $image) {
+    $source = \Tinify\fromFile($dir.$image);
+    $source->toFile("media/images/compressed/".$image);
+}
+
+echo "All images are compressed.";

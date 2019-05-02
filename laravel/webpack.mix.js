@@ -23,7 +23,7 @@ mix.options({
 });
 
 mix.browserSync({
-  proxy: 'local.donutsoop.com'
+  proxy: 'local.oopla.com'
 });
 
 mix.copyDirectory('resources/media', 'public/media');
