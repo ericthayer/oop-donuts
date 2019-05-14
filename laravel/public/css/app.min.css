@@ -62,14 +62,3 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
-
-.links > a {
-  color: currentColor;
-  padding: 0.5rem 1rem;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto;
-  text-transform: uppercase;
-}

@@ -12,5 +12,3 @@
 */
 
 Route::get('/', 'StoreController@index');
-
-Route::view('/welcome' , 'welcome');

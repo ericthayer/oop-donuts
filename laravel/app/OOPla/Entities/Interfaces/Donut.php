@@ -1,38 +1,76 @@
 <?php
 
-interface Donut
+namespace App\OOPla\Entities\Interfaces;
+
+abstract class Donut
 {
-    public function setDonutType(): array;
-    public function getDonutType();
-    public function setSpecialLabel();
-    public function getSpecialLabel();
-    public function setMonthlySpecialLabel();
-    public function getMonthlySpecialLabel();
+    public $types = [];
+    public $special;
+    public $monthlySpecial;
+    public $count = 0;
+    public $cost = 0;
 
-}
-
-class LabelDonut implements Donut
-{
-    protected $type = [];
-    protected $special;
-    protected $monthlySpecial;
-
-    public function __construct($donutTypes, $specialDonut, $monthlySpecialDonut)
+    public function __construct($donutTypes, $specialDonut, $monthlySpecialDonut, $donutCount, $donutCost)
     {
-        $this->type = $donutTypes;
+        $this->types[] = $donutTypes;
         $this->special = $specialDonut;
         $this->monthlySpecial = $monthlySpecialDonut;
+        $this->count = $donutCount;
+        $this->cost = $donutCost;
     }
 
-    public function setDonutType($donutTypes)
+    // Donut Type
+
+    public function setDonutType(array $donutTypes)
     {
-        return $this->type[] = $donutTypes;
+        foreach ($donutTypes as $type) {
+            $this->types[] = $type;
+        }
+        // return $this->type[] = $donutTypes;
     }
 
     public function getDonutType()
     {
-        $donutTypes = implode(", ", $this->type);
-        return $donutTypes;
+        $donutTypeList = implode(", ", $this->types);
+        return $this->$donutTypeList;
     }
 
+    // Special Label
+
+    public function setSpecial(bool $specialLabel)
+    {
+        $this->special = $specialLabel;
+    }
+
+    public function getSpecial()
+    {
+        return $this->special;
+    }
+
+    // Monthly Special
+
+    public function setMonthlySpecial(bool $monthlySpecialLabel)
+    {
+        $this->monthlySpecial = $monthlySpecialLabel;
+    }
+
+    public function getMonthlySpecial()
+    {
+        return $this->monthlySpecial;
+    }
+
+    public function setDonutCount()
+    {
+
+    }
+
+    public function getDonutCount()
+    {
+      return $this->count;
+    }
+
+    public function calcDonutCost()
+    {
+      return $this->cost;
+    }
 }
